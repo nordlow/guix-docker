@@ -9,8 +9,8 @@ LABEL Description="This is a minimal Linux (Alpine) with GNU Guix package manage
 ENV PATH /root/.guix-profile/bin:$PATH
 
 RUN cd /tmp
-RUN wget ftp://alpha.gnu.org/gnu/guix/guix-binary-0.10.0.x86_64-linux.tar.xz
-RUN tar xJf guix-binary-0.10.0.x86_64-linux.tar.xz
+RUN wget ftp://alpha.gnu.org/gnu/guix/guix-binary-0.13.0.x86_64-linux.tar.xz
+RUN tar xJf guix-binary-0.13.0.x86_64-linux.tar.xz
 RUN mv var/guix /var/ && mv gnu /
 RUN ln -sf /var/guix/profiles/per-user/root/guix-profile ~root/.guix-profile
 RUN guix archive --authorize < ~root/.guix-profile/share/guix/hydra.gnu.org.pub
